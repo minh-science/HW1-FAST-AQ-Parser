@@ -10,7 +10,11 @@ def transcribe(seq: str, reverse: bool = False) -> str:
     Write a function that will transcribe (replace DNA sequence to RNA
     by replacing all 'T' to 'U') in an input sequence
     """
-    pass
+    RNA = ""
+    for i in seq:
+        RNA += {"A": "U", "C":"C", "G":"G", "T":"T"}[i]
+    return RNA
+    # pass
 
 def reverse_transcribe(seq: str) -> str:
     """
@@ -19,4 +23,9 @@ def reverse_transcribe(seq: str) -> str:
     """
     # Hey this is my comment
     # Again!
-    pass
+    RT_str = ""
+    RT_list = [i for i in transcribe(seq)][::-1]
+    for i in RT_list:
+        RT_str += i
+    return RT_str
+    # pass
