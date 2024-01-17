@@ -12,8 +12,12 @@ def transcribe(seq: str, reverse: bool = False) -> str:
     """
     RNA = ""
     for i in seq:
-        RNA += {"A": "U", "C":"C", "G":"G", "T":"T"}[i]
-    return RNA
+        if i in ALLOWED_NUC:
+            RNA += TRANSCRIPTION_MAPPING[i]
+            return RNA
+        else:
+            return f"uhoh, {i} is not an allowed nucleotide "
+    
     # pass
 
 def reverse_transcribe(seq: str) -> str:
