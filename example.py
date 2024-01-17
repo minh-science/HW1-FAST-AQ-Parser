@@ -33,6 +33,8 @@ def main():
     for rec in fq:
         print("RT fq:", reverse_transcribe(rec[1]))
 
+    print( reverse_transcribe("GCAT") )
+
 
 """
 When executing a python script from the command line there will

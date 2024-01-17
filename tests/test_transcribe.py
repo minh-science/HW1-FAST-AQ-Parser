@@ -25,11 +25,11 @@ def test_transcribe():
     """
     Write your unit test for the transcribe function here.
     """
-    pass
+    assert transcribe("GCAT") == "GCUT"
 
 
 def test_reverse_transcribe():
     """
     Write your unit test for the reverse transcribe function here.
     """
-    pass
+    assert reverse_transcribe("GCAT") == "TUCG"
