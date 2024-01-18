@@ -15,7 +15,7 @@ def transcribe(seq: str, reverse: bool = False) -> str:
         if i in ALLOWED_NUC:
             RNA += TRANSCRIPTION_MAPPING[i]
         else:
-            return f"uhoh, {i} is not an allowed nucleotide "
+            raise ValueError(f"uhoh, {i} is not an allowed nucleotide ")
     return RNA
     
     # pass
@@ -32,4 +32,3 @@ def reverse_transcribe(seq: str) -> str:
     for i in RT_list:
         RT_str += i
     return RT_str
-    # pass
