@@ -35,5 +35,5 @@ from .parse import (
 from .seq import (
         transcribe,
         reverse_transcribe)
-
+ 
 __version__ = "0.1.1"
